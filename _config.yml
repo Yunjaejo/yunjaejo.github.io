@@ -1,5 +1,5 @@
 # Setup
-title: Not Pure Poole
+title: Learning Track
 description:
 url: https://Yunjaejo.github.io
 avatar: /avatar.png
@@ -28,15 +28,12 @@ exclude:
   - not-pure-poole.gemspec
 
 # Optimize Jekyl SEO Tag
-twitter:
-  username: vszhub
-  card: summary
 logo: logo.png
 social:
-  name: Songzi Vong
+  name: Yunjae Jo
   links:
-    - https://twitter.com/vszhub
-    - https://github.com/vszhub
+    - https://instagram.com/youdontknowyj
+    - https://github.com/Yunjaejo
 google_site_verification: xxxxx
 lang: en
 
@@ -54,6 +51,6 @@ sass:
 
 # Specify the author for blog posts
 author:
-  name: Songzi Vong
-  url: https://github.com/vszhub/
-  email: vszhub@gmail.com
+  name: Yunjae Jo
+  url: https://github.com/Yunjaejo
+  email: yunjae.dev@gmail.com
