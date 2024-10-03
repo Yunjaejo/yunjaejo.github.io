@@ -14,7 +14,7 @@ published: true
 <br />
 
 # Java 예외 계층 구조
-![exception.png](../assets/exception/exception.png)
+![exception.png](https://velog.velcdn.com/images%2Fljinsk3%2Fpost%2F82e87be8-cfb6-461f-8b8b-6a86ac7bca69%2FException-in-java1.png)
 자바에서 오류는 크게 Error(오류) 와 Exception(예외)로 나뉩니다. <br />
 
 <br />
@@ -51,6 +51,7 @@ RuntimeException 클래스를 상속하면 Unchecked, 상속하지 않으면 Che
 * 컴파일 단계에서 확인 가능합니다.
 * 예외 발생 시, 트랜잭션 롤백 하지 않습니다.
 * Exception 클래스를 직접 상속받습니다.
+
 ```java
 try {
     FileInputStream file = new FileInputStream("file.txt");
@@ -64,6 +65,7 @@ try {
 * 런타임 시점에 확인 가능합니다.
 * 예외 발생 시, 트랜잭션 롤백 합니다.
 * RuntimeException 클래스를 상속받습니다.
+
 ```java
 List<String> list = new ArrayList<>();
 String item = list.get(0); // IndexOutOfBoundException 발생 가능, 하지만 처리를 강제하지않음
@@ -73,7 +75,8 @@ String item = list.get(0); // IndexOutOfBoundException 발생 가능, 하지만 
 <br />
 
 ## 예외 활용 팁
-1. 메서드에서 Checked Exception 을 발생시킬 경우, **throws** 를 사용하여 호출자에게 핸들링을 위임할 수 있습니다.
+* 메서드에서 Checked Exception 을 발생시킬 경우, **throws** 를 사용하여 호출자에게 핸들링을 위임할 수 있습니다.
+
 ```java
 // 메서드 선언 부
 public void readFile(String filename) throws IOException {
@@ -88,9 +91,9 @@ try {
 }
 ```
 
-2. 가능한 **구체적인 예외**를 잡아 처리하는 것이 좋습니다. <br />
+* 가능한 **구체적인 예외**를 잡아 처리하는 것이 좋습니다. <br />
 막연하게 *(Exception e)* 로 캐치했다면 내가 생각했던 예외가 아니라 다른 경우가 걸릴 수 있습니다.
-3. 저수준의 예외를 잡아 고수준의 예외로 치환합니다. <br />
+* 저수준의 예외를 잡아 고수준의 예외로 치환합니다. <br />
 구체적인 세부사항을 사용처에 노출하지 않고, 더욱 의미있으며 내부 구현이 변경되어도 동일한 예외 타입을 유지할 수도 있습니다.
 
 <br />
